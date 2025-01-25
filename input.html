@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Journey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="step-1" class="step active">
+            <h2>Choose Your Gender</h2>
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <button onclick="nextStep()">NEXT</button>
+        </div>
+        <div id="step-2" class="step">
+            <h2>Choose Your Focus Area</h2>
+            <label><input type="radio" name="focus" value="Full Body"> Full Body</label>
+            <label><input type="radio" name="focus" value="Arms"> Arms</label>
+            <label><input type="radio" name="focus" value="Legs"> Legs</label>
+            <button onclick="nextStep()">NEXT</button>
+        </div>
+        <div id="step-3" class="step">
+            <h2>Choose Your Goal</h2>
+            <label><input type="radio" name="goal" value="Lose Weight"> Lose Weight</label>
+            <label><input type="radio" name="goal" value="Build Muscle"> Build Muscle</label>
+            <label><input type="radio" name="goal" value="Keep Fit"> Keep Fit</label>
+            <button onclick="nextStep()">NEXT</button>
+        </div>
+        <div id="step-4" class="step">
+            <h2>Select Your Preferred Level</h2>
+            <label><input type="radio" name="level" value="Beginner"> Beginner</label>
+            <label><input type="radio" name="level" value="Intermediate"> Intermediate</label>
+            <label><input type="radio" name="level" value="Advanced"> Advanced</label>
+            <button onclick="nextStep()">NEXT</button>
+        </div>
+        <div id="step-5" class="step">
+            <h2>Choose Your Active Level</h2>
+            <label><input type="radio" name="active" value="Sedentary"> Sedentary</label>
+            <label><input type="radio" name="active" value="Lightly Active"> Lightly Active</label>
+            <label><input type="radio" name="active" value="Moderately Active"> Moderately Active</label>
+            <label><input type="radio" name="active" value="Highly Active"> Highly Active</label>
+            <button onclick="nextStep()">NEXT</button>
+        </div>
+        <div id="step-6" class="step">
+            <h2>Enter Your Height and Weight</h2>
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight">
+            <button onclick="nextStep()">NEXT</button>
+        </div>
+        <div id="step-7" class="step">
+            <h2>What's Your Lifestyle?</h2>
+            <label><input type="radio" name="lifestyle" value="Vegan"> Vegan</label>
+            <label><input type="radio" name="lifestyle" value="Vegetarian"> Vegetarian</label>
+            <label><input type="radio" name="lifestyle" value="Non-Vegetarian"> Non-Vegetarian</label>
+            <button onclick="nextStep()">NEXT</button>
+        </div>
+        <div id="step-8" class="step">
+            <h2>Select Foods to Exclude</h2>
+            <input type="text" class="search-bar" placeholder="Search foods...">
+            <div class="food-item"><input type="checkbox" value="Bitter Gourd"> Bitter Gourd (Karela)</div>
+            <div class="food-item"><input type="checkbox" value="Bottle Gourd"> Bottle Gourd (Sorakaya)</div>
+            <div class="food-item"><input type="checkbox" value="Okra"> Okra (Ladyfinger)</div>
+            <div class="food-item"><input type="checkbox" value="Spinach"> Spinach (Palak)</div>
+            <div class="food-item"><input type="checkbox" value="Brinjal"> Brinjal (Eggplant)</div>
+            <div class="food-item"><input type="checkbox" value="Mutton"> Mutton (Goat)</div>
+            <div class="food-item"><input type="checkbox" value="Mushroom"> Mushroom (Putagodugulu)</div>
+            <div class="food-item"><input type="checkbox" value="Cauliflower"> Cauliflower </div>
+            <div class="food-item"><input type="checkbox" value="Cabbage"> Cabbage</div>
+            <div class="food-item"><input type="checkbox" value="Carrot"> Carrot</div>
+            <div class="food-item"><input type="checkbox" value="Potato"> Potato</div>
+            <div class="food-item"><input type="checkbox" value="Tomatoes"> Tomatoes</div>
+            <div class="food-item"><input type="checkbox" value="Peas"> Peas</div>
+            <div class="food-item"><input type="checkbox" value="Drumstick"> Drumstick (Moringa)</div>
+            <div class="food-item"><input type="checkbox" value="Green Beans"> Green Beans</div>
+            <div class="food-item"><input type="checkbox" value="Mushrooms"> Mushrooms</div>
+            <div class="food-item"><input type="checkbox" value="Radish"> Radish</div>
+            <div class="food-item"><input type="checkbox" value="Green Chilies"> Green Chilies</div>
+            <div class="food-item"><input type="checkbox" value="Sweet Potato"> Sweet Potato</div>
+            <div class="food-item"><input type="checkbox" value="Amaranth Leaves"> Amaranth Leaves (Chaulai)</div>
+            <div class="food-item"><input type="checkbox" value="Fenugreek Leaves"> Fenugreek Leaves (Methi)</div>
+            <div class="food-item"><input type="checkbox" value="Colocasia"> Colocasia (Arbi)</div>
+            <button onclick="nextStep()">NEXT</button>
+        </div>
+        <div id="step-9" class="step">
+            <h2>Which Meals Do You Want to Eat?</h2>
+            <label><input type="radio" name="meals" value="3 Meals"> Breakfast, Lunch, Dinner (3 Meals)</label>
+            <label><input type="radio" name="meals" value="Lunch Dinner"> Lunch, Dinner (Intermittent Fasting)</label>
+            <label><input type="radio" name="meals" value="Breakfast Lunch"> Breakfast, Lunch (Intermittent Fasting)</label>
+            <label><input type="radio" name="meals" value="Breakfast Dinner"> Breakfast, Dinner (Intermittent Fasting)</label>
+            <button onclick="nextStep()">NEXT</button>
+        </div>
+        <div id="step-10" class="step">
+            <h2>Which Type of Diet Do You Want?</h2>
+            <label><input type="radio" name="diet" value="Recommended"> Recommended (Best Match)</label>
+            <label><input type="radio" name="diet" value="High Protein"> High Protein</label>
+            <label><input type="radio" name="diet" value="Low Carb"> Low-Carb</label>
+            <label><input type="radio" name="diet" value="Keto"> Keto</label>
+            <label><input type="radio" name="diet" value="Low Fat"> Low-Fat</label>
+            <button onclick="nextStep()">NEXT</button>
+        </div>
+        <div id="step-11" class="step">
+            <h2>How Quickly Do You Want to Reach Your Goal?</h2>
+            <label for="timeframe">Select Timeframe:</label>
+            <input type="number" id="timeframe" placeholder="Enter time in weeks">
+            <button onclick="start()">CONTINUE</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

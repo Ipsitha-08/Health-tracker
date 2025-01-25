@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2a0845, #6441A5);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container, .login-container {
+    background: rgba(25, 20, 31, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Headings */
+h1, h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #6F2DBD;
+}
+
+/* Labels & Inputs */
+label {
+    display: block;
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #f0f0f0;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+input[type="email"], input[type="password"], input[type="number"], .search-bar {
+    width: 90%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #6F2DBD;
+}
+
+/* Buttons */
+button, .btn {
+    background: linear-gradient(135deg, #6F2DBD, #A663CC);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+    background: linear-gradient(135deg, #A663CC, #6F2DBD);
+    transform: scale(1.05);
+}
+
+/* Login Page */
+.login-container .divider {
+    margin: 1.5rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.login-container .divider::before,
+.login-container .divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #333;
+}
+
+.login-container .divider::before {
+    left: 0;
+}
+
+.login-container .divider::after {
+    right: 0;
+}
+
+.login-container .divider span {
+    background-color: #2a0845;
+    padding: 0 1rem;
+}
+
+.alternate-login {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.alternate-login button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #333;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alternate-login button:hover {
+    background-color: #444;
+}
+
+/* Steps */
+.step {
+    display: none;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.step.active {
+    display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
